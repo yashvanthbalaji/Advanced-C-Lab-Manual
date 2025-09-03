@@ -1,5 +1,10 @@
 EXP NO:1 C PROGRAM FOR ARRAY OF STRUCTURE TO CHECK ELIGIBILITY FOR THE VACCINE.
 
+```
+Developed by: BALAJI A
+Reg no.  212223040023
+```
+
 Aim:
 To write a C program for array of structure to check eligibility for the vaccine person age above 6 years of age.
 
@@ -16,15 +21,35 @@ Else
  
 Program:
 
-//type your code here
+```
+#include <stdio.h>
+
+struct eligible {
+    int age;
+    char n[50];
+};
+
+int main() {
+    struct eligible e;
+    scanf("%d", &e.age);
+    scanf("%s", e.n);
+    if (e.age <= 6)
+        printf("Vaccine Eligibility: No\n");
+    else
+        printf("Vaccine Eligibility: Yes\n");
+    printf("Age: %d\nName: %s\n", e.age, e.n);
+    return 0;
+}
+```
 
 
 Output:
 
-//paste your output here
+<img width="935" height="989" alt="image" src="https://github.com/user-attachments/assets/fa1736fc-51aa-44ed-8f4d-5c165463a776" />
 
 
 Result:
+
 Thus, the program is verified successfully. 
 
 
@@ -43,21 +68,39 @@ Algorithm:
 7.	Return 0
  
 Program:
+```
+#include <stdio.h>
 
-//type your code here
+struct numbers {
+    int a;
+    int b;
+};
 
+int add(struct numbers n) {
+    return n.a + n.b;
+}
 
-
+int main() {
+    struct numbers n;
+    printf("Enter values for a and b: ");
+    scanf("%d %d", &n.a, &n.b);
+    int result = add(n);
+    printf("Sum: %d\n", result);
+    return 0;
+}
+```
 
 Output:
 
 
-//paste your output here
+<img width="490" height="934" alt="image" src="https://github.com/user-attachments/assets/2f38e40a-1ad0-403a-a7ad-fff351d428e2" />
+
 
 
 
 
 Result:
+
 Thus, the program is verified successfully
 
 
@@ -86,27 +129,27 @@ Use scanf to input the file name into the name array.
  
 Program:
 
-//type your code here
-
-
-
+```
+#include <stdio.h>
+int main(){
+    FILE *fp;
+    char str[20];
+    scanf("%s",str);
+    fp=fopen(str,"w");
+    if (fp == NULL) {
+        printf("Could not create file.\n");
+    }
+    printf("%s File Created Successfully\n%s File Opened\n%s File Closed",str,str,str);
+    fclose(fp);
+}
+```
 
 Output:
 
-
-//paste your output here
-
-
-
-
-
-
-
-
-
-
+<img width="993" height="396" alt="image" src="https://github.com/user-attachments/assets/93f1b1cc-ef6d-4e00-a293-ab74e6f936e9" />
 
 Result:
+
 Thus, the program is verified successfully
  
 
@@ -133,22 +176,34 @@ Use scanf to input the file name into the name array and the number of strings i
  
 Program:
 
-//type your code here
-
-
-
+```
+#include <stdio.h>
+int main(){
+    FILE *fp;
+    int n;
+    char str[20],a[20];
+    scanf("%s",str);
+    scanf("%d",&n);
+    fp=fopen(str,"w");
+    if (fp == NULL) 
+    printf("Could not create file.\n");
+    for(int i=0;i<n;i++){
+        scanf("%s",a);
+        fprintf(fp,"%s/n",a);
+    }
+    printf("%s Opened\nData added Successfully",str);
+    fclose(fp);
+}
+```
 
 Output:
 
 
-//paste your output here
-
-
-
-
+<img width="739" height="356" alt="image" src="https://github.com/user-attachments/assets/a9ae2af4-45cc-41c1-82b4-f8d1d4924360" />
 
 
 Result:
+
 Thus, the program is verified successfully
 
 
@@ -186,20 +241,34 @@ Algorithm:
 13.End the program by returning 0.
 
 Program:
+```
+#include <stdio.h>
 
-//type your code here
+struct eligible {
+    int age;
+    char n[50];
+};
 
+int main() {
+    struct eligible e;
+    scanf("%s", e.n);
+    scanf("%d", &e.age);
 
+    if (e.age <= 6)
+        printf("Vaccine Eligibility: No\n");
+    else
+        printf("Vaccine Eligibility: Yes\n");
+
+    printf("Name: %s\nAge: %d\n", e.n, e.age);
+
+    return 0;
+}
+```
 
 
 Output:
 
-
-//paste your output here
-
-
-
-
+![444748233-defd225e-4e2d-4045-98b2-3241d2d79772](https://github.com/user-attachments/assets/070590aa-6c9e-45c2-981f-2d33e85ee4e9)
 
 
 Result:
