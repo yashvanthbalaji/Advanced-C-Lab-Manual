@@ -14,7 +14,7 @@ To write a C program to display stack elements using an array.
 5.	Initialize the stack and top as needed.
 6.	Perform stack operations (push, pop, etc.).
 7.	Use the display function to visualize the stack's contents
- 
+
 ## Program:
 ~~~
 int stack[40],top,i;
