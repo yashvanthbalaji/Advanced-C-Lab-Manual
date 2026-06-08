@@ -2,7 +2,6 @@
 ```
 Developed by: BALAJI A
 Reg no.  21222304023
-
 ```
 ## Aim:
 To write a C program to display stack elements using linked list.
